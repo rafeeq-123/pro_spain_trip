@@ -41,7 +41,7 @@ class RatesController < ApplicationController
   private
 
    def rate_params
-      params.require(:rate).permit(:item, :dollar)
+      params.require(:rate).permit(:item, :dollar, :euro, :colombian_peso)
    end
 
    def rate_find_params

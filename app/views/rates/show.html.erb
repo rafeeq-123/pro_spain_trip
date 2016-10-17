@@ -1,0 +1,18 @@
+<h1>Conversions</h1>
+<%Rate.all.each do |rate|%>
+<% if @euro%>
+<p> Item: <%=rate.item%>, in Euros Your item is <%=rate.dollar.to_i * 1.09714 %></p>
+
+<% elsif @pound%>
+
+<%Item: <%=rate.item%>, in Pounds Your item is <%=rate.dollar.to_i * 3 %></p>
+
+<% elsif @colombian_peso%>
+<% Item: <%=rate.item%>, in Colombian Pesos Your item is <%=rate.dollar.to_i * 10 %></p>
+
+ <p ><%=rate.created_at.strftime("%B, %d, %Y")%></p>
+ <%=link_to "Edit", edit_rate_path(@rate)%>
+  <%=link_to "Delete", rate_path(@rate), method: :delete%>
+    <%=link_to "Cancel", root_path%>
+<%end%>
+<%end%>

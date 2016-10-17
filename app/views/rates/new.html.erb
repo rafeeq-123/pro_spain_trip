@@ -5,7 +5,6 @@
   <%= f.text_field :item%>
     <%=f.label :amount%>
   <%= f.text_field :amount%>
-<%= select_tag(:option, options_for_select([['Euro', 2], ['Pound', 3], ['Colombian Peso', 4]])) %>
-
+<%= select_tag(:rates, options_for_select([['Euro', 2], ['Pound', 3], ['Colombian Peso', 4]])) %>
   <%= f.submit "Get Conversion"%>
   <%end%>
